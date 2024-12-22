@@ -1,0 +1,285 @@
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto.ttf);
+}
+
+body {
+  background-color: hsl(235, 18%, 26%);
+  font-family: Roboto;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Main-container {
+  background-color: white;
+  width: 700px;
+  max-width: 100%;
+  height: 470px;
+  display: flex;
+  border-radius: 1rem;
+}
+
+.leftside-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.leftside-container p {
+  line-height: 20px;
+}
+
+.rightside-container {
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.mobile-image {
+  visibility: hidden;
+}
+.rightside-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.Leftside-Title-H1 {
+  font-family: Roboto-Bold;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.form label {
+  display: block;
+}
+
+.checkboxes {
+  font-size: 13px;
+  margin-top: -25px;
+  line-height: 28px;
+}
+/* Remove default styles for the checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  margin: 0px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: hsl(4, 100%, 67%);
+  position: relative;
+}
+
+/* Style for the checkmark */
+input[type="checkbox"]:checked::after {
+  content: "✓"; /* Unicode character for checkmark */
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.leftside-container p {
+  margin-top: -10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.form label {
+  margin-top: -15px;
+  font-size: 11px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form input {
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 6px;
+  border-width: 1px;
+  margin-bottom: 15px;
+}
+
+.form button {
+  margin-top: 6px;
+  background-color: hsl(234, 29%, 20%);
+  color: white;
+  text-align: center;
+  width: 100%;
+  border-radius: 6px;
+  padding: 10px;
+  border-style: none;
+}
+
+.form button:hover {
+  background: linear-gradient(to right, #ff5474, #ff693e);
+  outline-style: none;
+  box-shadow: 0px 0px 10px #ff5444, /* Red shadow */ 0px 0px 20px #ffa097,
+    /* Blue shadow */ 0px 0px 30px #ffdbd8;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 618px) {
+  body {
+    overflow-y: hidden;
+  }
+  .Main-container {
+    background-color: white;
+    max-width: 400px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+  }
+
+  
+
+  .rightside-container {
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+    padding: 0px;
+    order: -1;
+  }
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+
+  }
+
+
+  .leftside-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+}
+
+.Confirmation-Message{
+    background-color: white;
+    width: 420px;
+    max-width: 100%;
+    height: 400px;
+    
+    
+    border-radius: 1rem;
+    font-family: Roboto;
+    box-sizing: border-box;
+    padding: 1rem;
+
+}
+
+.Confirmation-Message h1{
+    font-family: Roboto-Bold;
+    font-size: 2.3rem;
+    font-weight: 900;
+    margin: 0px;
+    
+}
+
+.Confirmation-Message p{
+    margin: 0px;
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+.Confirmation-Message span{
+    font-weight: 700;
+}
+
+.subscribing-background{
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding: 1rem;
+
+  }
+
+.subscribing-button{
+    margin-top: 6px;
+  background-color: hsl(234, 29%, 20%);
+  color: white;
+  text-align: center;
+  width: 90%;
+  border-radius: 6px;
+  padding: 10px;
+  border-style: none;
+  cursor: pointer;
+  font-family: Roboto;
+  margin: 0px;
+  font-weight: 900;
+}
+
+.subscribing-button:hover{
+    background: linear-gradient(to right, #ff5474, #ff693e);
+  outline-style: none;
+  box-shadow: 0px 0px 10px #ff5444, /* Red shadow */ 0px 0px 20px #ffa097,
+    /* Blue shadow */ 0px 0px 30px #ffdbd8;
+    cursor: pointer;
+}
+
+.Confirmation-Message{
+    display: none;
+}
+
+.checkboxes-confirmation-page input[type="checkbox"] {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: hsl(4, 100%, 67%);
+    position: relative;
+  }
+  
+  /* Style for the checkmark */
+ .checkboxes-confirmation-page input[type="checkbox"]:checked::after {
+    content: "✓"; /* Unicode character for checkmark */
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+ #label-to-hide-for-validation{
+  display: none;
+ }
